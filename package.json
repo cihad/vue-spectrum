@@ -5,20 +5,63 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
+    "@popperjs/core": "^2.5.3",
+    "@spectrum-css/actiongroup": "^1.0.0-beta.3",
+    "@spectrum-css/button": "^3.0.0-beta.4",
+    "@spectrum-css/buttongroup": "^3.0.0-beta.4",
+    "@spectrum-css/checkbox": "^3.0.0-beta.4",
+    "@spectrum-css/dialog": "^3.0.0-beta.4",
+    "@spectrum-css/divider": "^1.0.0-beta.1",
+    "@spectrum-css/fieldgroup": "^3.0.0-beta.4",
+    "@spectrum-css/fieldlabel": "^3.0.0-beta.5",
+    "@spectrum-css/icon": "^3.0.0-beta.0",
+    "@spectrum-css/link": "^3.0.1-beta.0",
+    "@spectrum-css/menu": "^3.0.0-beta.3",
+    "@spectrum-css/modal": "^3.0.0-beta.1",
+    "@spectrum-css/page": "^2.0.8-beta.0",
+    "@spectrum-css/popover": "^3.0.0-beta.4",
+    "@spectrum-css/quickaction": "^3.0.0-beta.4",
+    "@spectrum-css/radio": "^3.0.0-beta.3",
+    "@spectrum-css/search": "^3.0.0-beta.5",
+    "@spectrum-css/sidenav": "^3.0.0-beta.3",
+    "@spectrum-css/switch": "^1.0.0-beta.1",
+    "@spectrum-css/textfield": "^3.0.0-beta.4",
+    "@spectrum-css/typography": "^2.1.4-beta.0",
+    "@spectrum-css/underlay": "^2.0.8-beta.0",
+    "@spectrum-css/vars": "^3.0.0-beta.1",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "highlight.js": "^10.3.1",
+    "normalize.css": "^8.0.1",
+    "portal-vue": "^2.1.7",
+    "v-click-outside": "^3.1.2",
+    "vue": "^2.6.11",
+    "vue-frag": "^1.1.2",
+    "vue-merge-data": "^0.2.1",
+    "vue-proxi": "^1.0.0",
+    "vue-router": "^3.4.7",
+    "vue-spectrum-ui-icons": "^0.0.0",
+    "vue-spectrum-workflow-icons": "^0.0.1",
+    "vue-subslot": "^1.2.2",
+    "vue-vnode-syringe": "^3.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@spectrum-css/component-builder": "^1.2.1-beta.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "react-is": "^16.13.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.7.1"
   },
   "eslintConfig": {
     "root": true,
@@ -32,11 +75,19 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off",
+      "vue/no-unused-components": "off"
+    }
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "## Project setup ``` yarn install ```",
+  "main": "babel.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
