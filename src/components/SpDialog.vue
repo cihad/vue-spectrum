@@ -43,7 +43,7 @@
 						type="button"
 						quiet
 					>
-						<icon
+						<sp-icon
 							:icon="$options.components.CrossLarge"
 							class="spectrum-UIIcon-CrossLarge"
 							focusable="false"
@@ -59,7 +59,7 @@
 
 <script>
 import frag from 'vue-frag';
-import Icon from './Icon'
+import SpIcon from './SpIcon'
 import CrossLarge from 'vue-spectrum-ui-icons/dist/CrossLarge'
 import SpUnderlay from './SpUnderlay'
 import SpModal from './SpModal'
@@ -80,9 +80,10 @@ const sizeMap = {
 }
 
 export default {
+	name: "SpDialog",
 	components: {
 		vnodeSyringe,
-		Icon,
+		SpIcon,
 		Subslot,
 		SpUnderlay,
 		SpModal,

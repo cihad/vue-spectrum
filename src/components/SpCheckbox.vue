@@ -4,10 +4,10 @@
 		:class="{
 			'is-checked': checked,
 			'is-indeterminate': indeterminate,
-			'spectrum-Checkbox--quiet': !emphasized,
-			'spectrum-Checkbox--emphasized': emphasized,
+			'spectrum-Checkbox--quiet': !isEmphasized,
+			'spectrum-Checkbox--emphasized': isEmphasized,
 			'is-invalid': validationState === 'invalid',
-			'is-disabled': disabled,
+			'is-disabled': isDisabled,
 			'is-hovered': hovered
 		}"
 		@mouseenter="hovered = true"
@@ -19,6 +19,7 @@
 			@change="changeHandler"
 			type="checkbox"
 			class="spectrum-Checkbox-input"
+			:disabled="isDisabled"
 		>
 
 		<span class="spectrum-Checkbox-box">
@@ -49,6 +50,7 @@ import CheckmarkSmall from 'vue-spectrum-ui-icons/dist/CheckmarkSmall'
 import SpIcon from './SpIcon'
 
 export default {
+	name: "SpCheckbox",
 	components: {
 		SpIcon,
 		DashSmall,
@@ -93,7 +95,13 @@ export default {
 		},
 		isInGroup() {
 			return !this.spCheckbox?.standalone
-		}
+		},
+		isDisabled() {
+			return this.disabled || (this.isInGroup && this.spCheckbox?.isDisabled())
+		},
+		isEmphasized() {
+			return this.emphasized || (this.isInGroup && this.spCheckbox?.isEmphasized())
+		},
 	},
 	methods: {
 		changeHandler() {

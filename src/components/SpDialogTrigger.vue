@@ -31,6 +31,7 @@ import { PortalTarget, MountingPortal } from 'portal-vue'
 import SpHeading from './SpHeading'
 
 export default {
+	name: "SpDialogTrigger",
 	components: {
 		vnodeSyringe,
 		Subslot,

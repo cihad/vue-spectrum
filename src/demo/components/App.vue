@@ -9,8 +9,7 @@
                 <div class="title">
                   <img src="@/assets/adobe_logo_spectrum_site.svg" class="logo" />
                   <div>
-                    <sp-heading :level="2" class="title-Text">Vue Spectrum</sp-heading>
-                    <!-- <h2 class="spectrum-Heading3">Vue Spectrum</h2> -->
+                    <sp-heading :level="2" size="M" class="title-Text">Vue Spectrum</sp-heading>
                   </div>
                 </div>
               </div>
@@ -132,7 +131,7 @@ export default {
 
 .title-Text {
   margin: 0;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 .logo {

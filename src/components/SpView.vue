@@ -7,6 +7,7 @@
 
 <script>
 export default {
+	name: "SpView",
 	props: {
 		elementType: {
 			default: 'div'

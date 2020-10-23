@@ -1,4 +1,4 @@
-// const addVueRawPreLoader = require("../vue-raw-pre");
+const addVueRawPreLoader = require("../vue-raw-pre");
 
 module.exports = {
 	publicPath: process.env.NODE_ENV === 'production'
@@ -9,5 +9,7 @@ module.exports = {
 		// 	componentName: "example-demo",
 		// 	propName: "code"
 		// });
+
+		// addVueRawPreLoader(config)
 	},
 };

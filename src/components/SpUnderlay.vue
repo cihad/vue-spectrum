@@ -9,6 +9,7 @@
 
 <script>
 export default {
+	name: "SpUnderlay",
 	props: {
 		open: {
 			type: Boolean,

@@ -8,21 +8,21 @@
 		<slot />
 		&#8203;
 		<span
-			v-if="required && !necessityIndicator || necessityIndicator === 'label'"
+			v-if="required && (!necessityIndicator || necessityIndicator === 'label')"
 			aria-hidden="true"
 		>
 			(required)
 		</span>
 
 		<sp-icon
-			v-else-if="required && necessityIndicator == 'icon'"
+			v-if="required && necessityIndicator == 'icon'"
 			ui
 			:icon="$options.components.Asterisk"
 			class="spectrum-Icon spectrum-UIIcon-Asterisk spectrum-FieldLabel-requiredIcon"
 		/>
 
 		<span
-			v-else-if="!required && necessityIndicator === 'label'"
+			v-if="!required && necessityIndicator === 'label'"
 			aria-hidden="true"
 		>
 			(optional)
@@ -35,6 +35,7 @@ import SpIcon from './SpIcon.vue'
 import Asterisk from 'vue-spectrum-ui-icons/dist/Asterisk'
 
 export default {
+	name: "SpFieldLabel",
 	components: {
 		SpIcon,
 		Asterisk,

@@ -37,6 +37,8 @@ export default {
 					'primary',
 					'secondary',
 					'cta',
+					'warning',
+					'negative',
 				].includes(value)
 			}
 		},

@@ -66,7 +66,9 @@ export default {
 		quiet: Boolean,
 		disabled: Boolean,
 		inputClass: {
-			default: []
+			default() {
+				return []
+			}
 		}
 	},
 	data() {

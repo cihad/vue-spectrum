@@ -23,7 +23,7 @@ import SpPopover from './SpPopover'
 import vClickOutside from 'v-click-outside'
 
 export default {
-	name: 'SpMenuPopover',
+	name: 'SpMenuTrigger',
 	components: {
 		SpPopperWrapper,
 		SpPopover,

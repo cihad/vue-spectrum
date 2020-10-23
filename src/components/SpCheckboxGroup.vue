@@ -61,6 +61,10 @@ export default {
 		emphasized: {
 			type: Boolean,
 			default: false
+		},
+		disabled: {
+			type: Boolean,
+			default: false,
 		}
 	},
 	provide() {
@@ -68,15 +72,25 @@ export default {
 			spCheckbox: {
 				setValue: this.setValue,
 				isChecked: this.isChecked,
-				toggleSelect: this.toggleSelect
+				toggleSelect: this.toggleSelect,
+				isDisabled: this.isDisabled,
+				isEmphasized: this.isEmphasized,
 			}
 		}
 	},
 	methods: {
 		isChecked(value) {
-			return this.value.includes(value)
+			return this.value && this.value.includes(value)
+		},
+		isDisabled() {
+			return this.disabled
+		},
+		isEmphasized() {
+			return this.emphasized
 		},
 		toggleSelect(value) {
+			if (!this.value) return
+
 			let newValue;
 
 			let index = this.value.findIndex(it => it === value);

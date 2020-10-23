@@ -18,6 +18,7 @@
 
 <script>
 export default {
+	name: "SpModal",
 	props: {
 		open: {
 			type: Boolean,
