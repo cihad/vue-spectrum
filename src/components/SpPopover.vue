@@ -16,7 +16,14 @@ export default {
 		open: {
 			default: true,
 			type: Boolean
-		}
+		},
+		direction: {
+			type: String,
+			default: 'bottom',
+			validator(value) {
+				return ['top', 'bottom', 'left', 'right'].includes(value)
+			}
+		},
 	},
 	inject: {
 		spPopover: {
@@ -27,7 +34,7 @@ export default {
 		classes() {
 			return [
 				{
-					'is-open': this.open
+					'is-open': this.open,
 				},
 				...wrapArray(this.spPopover?.classes)
 			]

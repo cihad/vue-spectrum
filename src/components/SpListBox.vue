@@ -24,11 +24,18 @@ export default {
 		let classes;
 		if (this.selectionMode) classes = 'is-selectable'
 
+		const self = this
+
 		return {
 			spListBoxItem: {
 				classes,
 				toggleSelect: this.toggleSelect,
 				isSelected: this.isSelected,
+			},
+			spListBoxSection: {
+				isFirst(section) {
+					return self.$children.indexOf(section) === 0
+				}
 			}
 		}
 	},

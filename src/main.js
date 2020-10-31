@@ -49,7 +49,9 @@ importAll(require.context('@/components/', false, /.vue$/))
 
 
 import DemoTitle from '@/demo/components/DemoTitle'
+import PageTitle from '@/demo/components/PageTitle'
 Vue.component(DemoTitle.name, DemoTitle)
+Vue.component(PageTitle.name, PageTitle)
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false

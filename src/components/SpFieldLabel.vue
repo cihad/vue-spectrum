@@ -2,7 +2,8 @@
 	<label
 		class="spectrum-Fieldlabel"
 		:class="{
-			'spectrum-FieldLabel--right': right
+			'spectrum-FieldLabel--right': right,
+			'spectrum-FieldLabel--left': !right,
 		}"
 	>
 		<slot />

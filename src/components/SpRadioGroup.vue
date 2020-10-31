@@ -9,7 +9,7 @@
 		</sp-field-label>
 
 		<sp-field-group
-			:orientation="orientation"
+			:vertical="vertical"
 		>
 			<vnode-syringe
 				class&="spectrum-FieldGroup-item"
@@ -38,15 +38,9 @@ export default {
 		label: {
 			type: String
 		},
-		orientation: {
-			type: String,
-			default: 'vertical',
-			validator(value) {
-				return [
-					'vertical',
-					'horizontal'
-				].indexOf(value) !== -1
-			}
+		vertical: {
+			type: Boolean,
+			default: false
 		},
 		required: {
 			type: Boolean,

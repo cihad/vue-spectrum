@@ -2,6 +2,7 @@
 	<button
 		class="spectrum-Button"
 		:class="classes"
+		@click="$emit('click', $event)"
 	>
 		<subslot element="@SpIcon" />
 		

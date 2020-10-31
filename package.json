@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build:site": "vue-cli-service build --dest docs --inline-vue",
+    "build:library": "vue-cli-service build src/library.js --target lib --name VueSpectrum",
     "lint": "vue-cli-service lint",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"

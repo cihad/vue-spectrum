@@ -18,22 +18,22 @@
 
 <script>
 import SpPopperWrapper from './SpPopperWrapper'
-import vnodeSyringe from 'vue-vnode-syringe';
-import Subslot from 'vue-subslot';
-import SpPopover from './SpPopover'
-import vClickOutside from 'v-click-outside'
-
+import SpArrow from './SpArrow'
+import Subslot from 'vue-subslot'
+import vnodeSyringe from 'vue-vnode-syringe'
 import SpButton from './SpButton'
 import SpActionButton from './SpActionButton'
 import SpLink from './SpLink'
+import vClickOutside from 'v-click-outside'
+
 
 export default {
-	name: 'SpMenuTrigger',
+	name: "SpPopoverTrigger",
 	components: {
+		SpPopperWrapper,
+		SpArrow,
 		Subslot,
 		vnodeSyringe,
-		SpPopperWrapper,
-		SpPopover,
 		SpButton,
 		SpActionButton,
 		SpLink,
@@ -50,21 +50,14 @@ export default {
 		clickOutside: vClickOutside.directive
 	},
 	props: {
-		closeOnSelect: {
-			default: true,
-			type: Boolean
-		},
 		placement: {
 			type: String,
-			string: 'bottom-start',
+			default: 'bottom',
 		}
-	},
-	methods: {
-		closeHandler(close) {
-			if (this.closeOnSelect) setTimeout(() => {
-				close()
-			}, 100)
-		},
 	}
 }
 </script>
+
+<style>
+
+</style>

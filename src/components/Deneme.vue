@@ -1,35 +1,56 @@
 <template>
 	<div>
-		<input type="checkbox" id="checkbox" v-model="modelValue" :value="value" />
-		{{ modelValue }}
+
+		<input type="checkbox" v-model="show" />
+
+		<cihad
+			v-show="true"
+			:show="show"
+		>
+			<sp-button v-show="false">cihad btn</sp-button>
+		</cihad>
 	</div>
 </template>
 
 <script>
+import Vnode from './Vnode'
+
 export default {
-	name: "Deneme",
-	model: {
-		prop: 'checked',
-		event: 'change'
-	},
-	props: {
-		value: {},
-		checked: {}
+	name: 'Deneme',
+	components: {
+		Vnode,
+		cihad: {
+			props: ['show'],
+			render(h) {
+				const vnode = this.$scopedSlots.default()[0]
+
+				return h(Vnode, {
+					props: {
+						vnode
+					},
+					directives: [
+						{
+							name: "show",
+							value: this.show
+						}
+					],
+					ref: "cihad"
+				})
+			},
+			mounted() {
+				// console.log('deneme refs', this.$refs)
+			}
+		}
 	},
 	data() {
 		return {
-			modelValue: this.checked
+			show: true
 		}
 	},
-	watch: {
-		modelValue(newValue) {
-			this.$emit("change", newValue);
-		},
-		checked(newValue) {
-			this.modelValue = newValue
-		}
-	},
-};
+	mounted() {
+		// console.log(this.$refs)
+	}
+}
 </script>
 
 <style>

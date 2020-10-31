@@ -8,7 +8,9 @@
 		<div
 			class="spectrum-Modal"
 			:class="{
-				'is-open': open
+				'is-open': open,
+				'spectrum-Modal--fullscreen': fullscreen && !takeover,
+				'spectrum-Modal--fullscreenTakeover': fullscreen && takeover
 			}"
 		>
 			<slot />
@@ -21,6 +23,14 @@ export default {
 	name: "SpModal",
 	props: {
 		open: {
+			type: Boolean,
+			default: false
+		},
+		fullscreen: {
+			type: Boolean,
+			default: false
+		},
+		takeover: {
 			type: Boolean,
 			default: false
 		}

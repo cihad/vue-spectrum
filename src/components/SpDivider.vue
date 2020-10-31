@@ -1,8 +1,9 @@
 <template>
-	<hr
+	<component
+		:is="vertical ? 'div' : 'hr'"
 		class="spectrum-Divider"
-		:class="classes"	
-	>
+		:class="classes"
+	/>
 </template>
 
 <script>
@@ -15,15 +16,9 @@ const sizeMap = {
 export default {
 	name: "SpDivider",
 	props: {
-		orientation: {
-			type: String,
-			default: 'horizontal',
-			validator(value) {
-				return [
-					'horizontal',
-					'vertical'
-				].indexOf(value) !== -1
-			}
+		vertical: {
+			type: Boolean,
+			default: false,
 		},
 		size: {
 			type: String,
@@ -37,7 +32,7 @@ export default {
 		classes() {
 			return [
 				`spectrum-Divider--${sizeMap[this.size]}`,
-				`spectrum-Divider--${this.orientation}`
+				`spectrum-Divider--${this.vertical ? 'vertical' : 'horizontal'}`
 			]
 		}
 	}
@@ -46,4 +41,8 @@ export default {
 
 <style>
 @import "~@spectrum-css/divider/dist/index-vars.css";
+
+.spectrum-Divider--vertical {
+	height: auto;
+}
 </style>

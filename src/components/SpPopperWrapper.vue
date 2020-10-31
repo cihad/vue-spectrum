@@ -11,12 +11,14 @@
 <script>
 import { createPopper } from '@popperjs/core';
 import vnodeSyringe from 'vue-vnode-syringe';
+import Vnode from './Vnode'
+
+const isTargetInRef = (reference, target) => {
+	return reference == target || reference.contains(target)
+}
 
 export default {	
 	name: "SpPopperWrapper",
-	components: {
-		vnodeSyringe
-	},
 	props: {
 		placement: {
 			default: 'bottom-start',
@@ -40,7 +42,12 @@ export default {
 					'left-end',
 				].indexOf(value) !== -1
 			}
-		}
+		},
+		offset: {
+			default() {
+				return [0, 6]
+			}
+		},
 	},
 	data() {
 		return {
@@ -51,25 +58,29 @@ export default {
 		}
 	},
 	mounted() {
+		const { offset, placement } = this
+
+		// debugger // eslint-disable-line
+
+		const modifiers = [
+			{
+				name: 'offset',
+				options: { offset },
+			},
+			{
+				name: 'computeStyles',
+				options: {
+					adaptive: false,
+				}
+			}
+		]
+
 		this.popper = createPopper(
-			this.triggerSlots[0].elm,
-			this.defaultSlots[0].elm,
+			this.$children[0].$el,
+			this.$children[1].$el,
 			{	
-				placement: this.placement,
-				modifiers: [
-					{
-						name: 'offset',
-						options: {
-							offset: [0, 6],
-						},
-					},
-					{
-						name: 'computeStyles',
-						options: {
-							adaptive: false
-						},
-					},
-				],
+				modifiers,
+				placement,
 			},
 		)
 	},
@@ -78,15 +89,22 @@ export default {
 			this.popper.setOptions({
 				placement: this.placement
 			})
-		}
+		},
+		show(newValue) {
+			const self = this
+			this.$nextTick(() => self.popper.update())
+		},
 	},
 	methods: {
 		open() {
 			this.show = true
 		},
 		close(event) {
-			// debugger // eslint-disable-line
-			if (event && this.popper.state.elements.reference == event.target) return
+			const { reference } = this.popper.state.elements
+			const target = event?.target
+
+			if (event && isTargetInRef(reference, target)) return
+
 			this.show = false
 		},
 		toggle() {
@@ -99,22 +117,18 @@ export default {
 		const defaultSlots = this.defaultSlots = this.$scopedSlots.default({open,close,toggle,show})
 		const triggerSlots = this.triggerSlots = this.$scopedSlots.trigger({open,close,toggle,show})
 
-		return h('div', 
+		
+		return h('div',
 			[
 				...triggerSlots,
-				h(
-					'div',
-					{
-						directives: [
-							{
-								name: 'show',
-								value: this.show,
-								expression: 'show'
-							}
-						]
+				h(Vnode, {
+					props: {
+						vnode: defaultSlots[0]
 					},
-					[...defaultSlots]
-				)
+					style: {
+						visibility: this.show ? 'visible' : 'hidden'
+					},
+				}),
 			]
 		);
 	}

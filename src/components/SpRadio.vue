@@ -58,7 +58,7 @@ export default {
 			return !this.spRadio?.standalone
 		},
 		isChecked() {
-			return this.spRadio?.isChecked(this.value)
+			return this.spRadio?.isChecked && this.spRadio.isChecked(this.value)
 		}
 	},
 	methods: {

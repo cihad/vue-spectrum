@@ -9,6 +9,17 @@
 </template>
 
 <script>
+export const sizes = [
+	'XXXL',
+	'XXL',
+	'XL',
+	'L',
+	'M',
+	'S',
+	'XS',
+	'XXS',
+]
+
 export default {
 	name: "SpHeading",
 	props: {
@@ -19,16 +30,7 @@ export default {
 		size: {
 			type: String,
 			validator(value) {
-				return [
-					'XXXL',
-					'XXL',
-					'XL',
-					'L',
-					'M',
-					'S',
-					'XS',
-					'XXS',
-				].indexOf(value) !== -1
+				return sizes.includes(value)
 			}
 		},
 		heavy: {

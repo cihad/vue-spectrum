@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="spectrum-FieldGroup"
-		:class="[`spectrum-FieldGroup--${this.orientation}`]"
+		:class="[`spectrum-FieldGroup--${vertical ? 'vertical' : 'horizontal'}`]"
 	>
 		<vnode-syringe class&="spectrum-FieldGroup-item">
 			<slot />
@@ -18,15 +18,9 @@ export default {
 		vnodeSyringe
 	},
 	props: {
-		orientation: {
-			type: String,
-			default: 'vertical',
-			validator(value) {
-				return [
-					'vertical',
-					'horizontal'
-				].indexOf(value) !== -1
-			}
+		vertical: {
+			type: Boolean,
+			default: false,
 		}
 	},
 }

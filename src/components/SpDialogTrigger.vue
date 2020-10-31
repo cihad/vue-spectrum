@@ -3,17 +3,35 @@
 		<vnode-syringe
 			@click="toggle"
 		>
-			<subslot element="@SpActionButton" limit="1" />
+			<subslot
+				:vnodes="vnodes"
+				:element="['@SpActionButton', '@SpButton', '@SpLink']"
+				limit="1"
+			/>
 		</vnode-syringe>
 
 		<mounting-portal mountTo="body" append>
 			<sp-provider>
-				<vnode-syringe
-					:open="open"
-					@update:open="open = $event"
+				<sp-underlay :open="componentOpen" @click="underlayClickHandler" />
+
+				<sp-modal
+					:open="componentOpen"
+					:fullscreen="fullscreen"
+					:takeover="takeover"
 				>
-					<subslot element="@SpDialog" />
-				</vnode-syringe>
+					<vnode-syringe
+						:open="componentOpen"
+						@update:open="componentOpen = $event"
+						:dismissable="dismissable"
+						:fullscreen="fullscreen"
+						:takeover="takeover"
+					>
+						<subslot
+							:vnodes="vnodes"
+							element="@SpDialog"
+						/>
+					</vnode-syringe>
+				</sp-modal>
 			</sp-provider>
 		</mounting-portal>
 	</div>
@@ -25,7 +43,11 @@ import Subslot from 'vue-subslot'
 import frag from 'vue-frag';
 import SpProvider from './SpProvider'
 import SpActionButton from './SpActionButton'
+import SpButton from './SpButton'
+import SpLink from './SpLink'
 import SpDialog from './SpDialog'
+import SpModal from './SpModal'
+import SpUnderlay from './SpUnderlay'
 import PortalVue from 'portal-vue'
 import { PortalTarget, MountingPortal } from 'portal-vue'
 import SpHeading from './SpHeading'
@@ -37,28 +59,63 @@ export default {
 		Subslot,
 		SpProvider,
 		SpActionButton,
+		SpButton,
+		SpLink,
 		SpDialog,
+		SpUnderlay,
+		SpModal,
 		MountingPortal,
 		SpHeading,
 	},
 	directives: {
 		frag
 	},
+	props: {
+		open: {
+			type: Boolean,
+			default: false
+		},
+		fullscreen: {
+			type: Boolean,
+			default: false
+		},
+		takeover: {
+			type: Boolean,
+			default: false,
+		},
+		dismissable: {
+			type: Boolean,
+			default: false
+		},
+	},
 	data() {
 		return {
-			open: false
+			componentOpen: this.open
 		}
 	},
-	created() {
-		
+	computed: {
+		vnodes() {
+			const { toggle, close } = this
+			return this.$scopedSlots.default({ close, toggle })
+		},
+	},
+	watch: {
+		componentOpen(newValue) {
+			this.$emit('update:open', newValue)
+		},
 	},
 	methods: {
 		toggle() {
-			this.open = !this.open
+			this.componentOpen = !this.componentOpen
 		},
 		close() {
-			this.open = false
-		}
+			this.componentOpen = false
+			this.$emit('update:open', false)
+		},
+		underlayClickHandler() {
+			if (!this.dismissable) return
+			this.close()
+		},
 	}
 }
 </script>
