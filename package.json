@@ -1,7 +1,10 @@
 {
   "name": "vue-spectrum",
   "version": "0.1.0",
-  "private": true,
+  "main": "dist/VueSpectrum.common.js",
+  "module": "dist/VueSpectrum.common.js",
+  "unpkg": "dist/VueSpectrum.umd.min.js",
+  "browser": "dist/VueSpectrum.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build:site": "vue-cli-service build --dest docs --inline-vue",
@@ -87,7 +90,6 @@
     "not dead"
   ],
   "description": "## Project setup ``` yarn install ```",
-  "main": "babel.config.js",
   "keywords": [],
   "author": "",
   "license": "ISC"
