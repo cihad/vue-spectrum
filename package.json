@@ -7,6 +7,7 @@
   "browser": "dist/VueSpectrum.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
+    "build": "yarn build:site && yarn build:library",
     "build:site": "vue-cli-service build --dest docs --inline-vue",
     "build:library": "vue-cli-service build src/library.js --target lib --name VueSpectrum",
     "lint": "vue-cli-service lint",
