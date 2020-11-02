@@ -1,6 +1,6 @@
 {
   "name": "vue-spectrum",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "dist/VueSpectrum.common.js",
   "module": "dist/VueSpectrum.common.js",
   "unpkg": "dist/VueSpectrum.umd.min.js",
