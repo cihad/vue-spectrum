@@ -4084,7 +4084,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
-var ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__("e9dc");
+var ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__("1dd4");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 exports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
 // Module
@@ -7834,12 +7834,12 @@ var SpActionGroup_component = normalizeComponent(
 )
 
 /* harmony default export */ var SpActionGroup = (SpActionGroup_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3f8d3f5a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpButton.vue?vue&type=template&id=960d82d4&
-var SpButtonvue_type_template_id_960d82d4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"spectrum-Button",class:_vm.classes,on:{"click":function($event){return _vm.$emit('click', $event)}}},[_c('subslot',{attrs:{"element":"@SpIcon"}}),_c('sp-text',{staticClass:"spectrum-Button-label"},[_c('subslot',{attrs:{"vnodes":_vm.$slots.default.filter(function (vnode) { return !vnode.tag; })}})],1)],1)}
-var SpButtonvue_type_template_id_960d82d4_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3f8d3f5a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpButton.vue?vue&type=template&id=55eb250e&
+var SpButtonvue_type_template_id_55eb250e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"spectrum-Button",class:_vm.classes,on:{"click":function($event){return _vm.$emit('click', $event)}}},[_c('subslot',{attrs:{"element":"@SpIcon"}}),_c('sp-text',{staticClass:"spectrum-Button-label"},[_c('subslot',{attrs:{"vnodes":_vm.$slots.default.filter(function (vnode) { return !vnode.tag; })}})],1)],1)}
+var SpButtonvue_type_template_id_55eb250e_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/SpButton.vue?vue&type=template&id=960d82d4&
+// CONCATENATED MODULE: ./src/components/SpButton.vue?vue&type=template&id=55eb250e&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.includes.js
 var es_array_includes = __webpack_require__("caad");
@@ -7937,8 +7937,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var SpButton_component = normalizeComponent(
   components_SpButtonvue_type_script_lang_js_,
-  SpButtonvue_type_template_id_960d82d4_render,
-  SpButtonvue_type_template_id_960d82d4_staticRenderFns,
+  SpButtonvue_type_template_id_55eb250e_render,
+  SpButtonvue_type_template_id_55eb250e_staticRenderFns,
   false,
   SpButton_injectStyles,
   null,

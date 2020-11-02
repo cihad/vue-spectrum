@@ -69,5 +69,5 @@ export default {
 </script>
 
 <style>
-@import "~@spectrum-css/popover/dist/index-vars.css";
+@import "~@spectrum-css/button/dist/index-vars.css";
 </style>
