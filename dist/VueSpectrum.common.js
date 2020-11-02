@@ -12369,16 +12369,16 @@ var SpMenuTrigger_component = normalizeComponent(
 )
 
 /* harmony default export */ var SpMenuTrigger = (SpMenuTrigger_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3f8d3f5a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpPopoverTrigger.vue?vue&type=template&id=5e0dc7fb&
-var SpPopoverTriggervue_type_template_id_5e0dc7fb_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('sp-popper-wrapper',{attrs:{"placement":_vm.placement},scopedSlots:_vm._u([{key:"trigger",fn:function(ref){
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3f8d3f5a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpPopoverTrigger.vue?vue&type=template&id=ce33dde6&
+var SpPopoverTriggervue_type_template_id_ce33dde6_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('sp-popper-wrapper',{attrs:{"placement":_vm.placement},scopedSlots:_vm._u([{key:"trigger",fn:function(ref){
 var toggle = ref.toggle;
 return [_c('vnode-syringe',{class:{ 'is-active': true },on:{"click":toggle}},[_c('subslot',{attrs:{"name":"trigger"}})],1)]}},{key:"default",fn:function(ref){
 var close = ref.close;
 return [_c('sp-popover',{directives:[{name:"click-outside",rawName:"v-click-outside",value:(close),expression:"close"}]},[_c('vnode-syringe',{on:{"selection-change":function($event){return _vm.closeHandler(close)}}},[_c('subslot')],1)],1)]}}])})}
-var SpPopoverTriggervue_type_template_id_5e0dc7fb_staticRenderFns = []
+var SpPopoverTriggervue_type_template_id_ce33dde6_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/SpPopoverTrigger.vue?vue&type=template&id=5e0dc7fb&
+// CONCATENATED MODULE: ./src/components/SpPopoverTrigger.vue?vue&type=template&id=ce33dde6&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3f8d3f5a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpArrow.vue?vue&type=template&id=437abed9&
 var SpArrowvue_type_template_id_437abed9_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('svg',{ref:"svg",attrs:{"width":Math.ceil(_vm.landscape ? _vm.secondary : _vm.primary),"height":Math.ceil(_vm.landscape ? _vm.primary : _vm.secondary)}},[_c('path',{staticClass:"spectrum-Popover-tip-triangle",attrs:{"d":_vm.pathData.join(' ')}})])}
@@ -12528,6 +12528,7 @@ var SpArrow_component = normalizeComponent(
 
 
 
+
 /* harmony default export */ var SpPopoverTriggervue_type_script_lang_js_ = ({
   name: "SpPopoverTrigger",
   components: {
@@ -12537,7 +12538,8 @@ var SpArrow_component = normalizeComponent(
     vnodeSyringe: vnode_syringe_esm,
     SpButton: SpButton,
     SpActionButton: SpActionButton,
-    SpLink: SpLink
+    SpLink: SpLink,
+    SpPopover: SpPopover
   },
   mixins: [Subslot_default.a.define({
     trigger: {
@@ -12570,8 +12572,8 @@ function SpPopoverTrigger_injectStyles (context) {
 
 var SpPopoverTrigger_component = normalizeComponent(
   components_SpPopoverTriggervue_type_script_lang_js_,
-  SpPopoverTriggervue_type_template_id_5e0dc7fb_render,
-  SpPopoverTriggervue_type_template_id_5e0dc7fb_staticRenderFns,
+  SpPopoverTriggervue_type_template_id_ce33dde6_render,
+  SpPopoverTriggervue_type_template_id_ce33dde6_staticRenderFns,
   false,
   SpPopoverTrigger_injectStyles,
   null,

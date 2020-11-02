@@ -25,6 +25,7 @@ import SpButton from './SpButton'
 import SpActionButton from './SpActionButton'
 import SpLink from './SpLink'
 import vClickOutside from 'v-click-outside'
+import SpPopover from './SpPopover'
 
 
 export default {
@@ -37,6 +38,7 @@ export default {
 		SpButton,
 		SpActionButton,
 		SpLink,
+		SpPopover,
 	},
 	mixins: [
 		Subslot.define({
