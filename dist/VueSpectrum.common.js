@@ -8537,12 +8537,12 @@ var SpContent_component = normalizeComponent(
 )
 
 /* harmony default export */ var SpContent = (SpContent_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3f8d3f5a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpDialog.vue?vue&type=template&id=4b390fee&
-var SpDialogvue_type_template_id_4b390fee_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"spectrum-Dialog",class:_vm.classes,attrs:{"role":"dialog","tabindex":"-1","aria-modal":"true"}},[_c('div',{staticClass:"spectrum-Dialog-grid"},[_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-heading"}},[_c('subslot',{attrs:{"element":"@SpHeading","limit":"1"}})],1),_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-header"}},[_c('subslot',{attrs:{"element":"@SpHeader","limit":"1"}})],1),_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-divider","size":"M"}},[_c('subslot',{attrs:{"element":"@SpDivider","limit":"1"}})],1),_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-content"}},[_c('subslot',{attrs:{"element":"@SpContent"}})],1),_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter"}},[_c('subslot',{attrs:{"element":"@SpButtonGroup"}})],1),_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-footer"}},[_c('subslot',{attrs:{"element":"@SpFooter"}})],1),(_vm.dismissable)?_c('sp-action-button',{staticClass:"spectrum-Dialog-closeButton",attrs:{"aria-label":"Dismiss","type":"button","quiet":""},on:{"click":function($event){return _vm.$emit('update:open', false)}}},[_c('sp-icon',{staticClass:"spectrum-UIIcon-CrossLarge",attrs:{"ui":"","icon":_vm.$options.components.CrossLarge,"focusable":"false","aria-hidden":"true"}})],1):_vm._e()],1)])}
-var SpDialogvue_type_template_id_4b390fee_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3f8d3f5a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpDialog.vue?vue&type=template&id=b8f16b44&
+var SpDialogvue_type_template_id_b8f16b44_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"spectrum-Dialog",class:_vm.classes,attrs:{"role":"dialog","tabindex":"-1","aria-modal":"true"}},[_c('div',{staticClass:"spectrum-Dialog-grid"},[_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-heading"}},[_c('subslot',{attrs:{"element":"@SpHeading","limit":"1"}})],1),_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-header"}},[_c('subslot',{attrs:{"element":"@SpHeader","limit":"1"}})],1),_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-divider","size":"M"}},[_c('subslot',{attrs:{"element":"@SpDivider","limit":"1"}})],1),_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-content"}},[_c('subslot',{attrs:{"element":"@SpContent"}})],1),_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter"}},[_c('subslot',{attrs:{"element":"@SpButtonGroup"}})],1),_c('vnode-syringe',{attrs:{"class&":"spectrum-Dialog-footer"}},[_c('subslot',{attrs:{"element":"@SpFooter"}})],1),(_vm.dismissable)?_c('sp-action-button',{staticClass:"spectrum-Dialog-closeButton",attrs:{"aria-label":"Dismiss","type":"button","quiet":""},on:{"click":function($event){return _vm.$emit('update:open', false)}}},[_c('sp-icon',{staticClass:"spectrum-UIIcon-CrossLarge",attrs:{"ui":"","icon":_vm.$options.components.CrossLarge,"focusable":"false","aria-hidden":"true"}})],1):_vm._e()],1)])}
+var SpDialogvue_type_template_id_b8f16b44_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/SpDialog.vue?vue&type=template&id=4b390fee&
+// CONCATENATED MODULE: ./src/components/SpDialog.vue?vue&type=template&id=b8f16b44&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.keys.js
 var es_object_keys = __webpack_require__("b64b");
@@ -8982,70 +8982,6 @@ var SpFooter_component = normalizeComponent(
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -9140,8 +9076,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var SpDialog_component = normalizeComponent(
   components_SpDialogvue_type_script_lang_js_,
-  SpDialogvue_type_template_id_4b390fee_render,
-  SpDialogvue_type_template_id_4b390fee_staticRenderFns,
+  SpDialogvue_type_template_id_b8f16b44_render,
+  SpDialogvue_type_template_id_b8f16b44_staticRenderFns,
   false,
   SpDialog_injectStyles,
   null,
@@ -12813,15 +12749,17 @@ var SpRadio_component = normalizeComponent(
 )
 
 /* harmony default export */ var SpRadio = (SpRadio_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3f8d3f5a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpRadioGroup.vue?vue&type=template&id=7dfc36e1&
-var SpRadioGroupvue_type_template_id_7dfc36e1_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('sp-field-group',[(_vm.label)?_c('sp-field-label',{attrs:{"required":_vm.required,"necessity-indicator":_vm.necessityIndicator}},[_vm._v(" "+_vm._s(_vm.label)+" ")]):_vm._e(),_c('sp-field-group',{attrs:{"vertical":_vm.vertical}},[_c('vnode-syringe',{attrs:{"class&":"spectrum-FieldGroup-item","emphasized":_vm.emphasized}},[_vm._t("default")],2)],1)],1)}
-var SpRadioGroupvue_type_template_id_7dfc36e1_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3f8d3f5a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpRadioGroup.vue?vue&type=template&id=19322be3&
+var SpRadioGroupvue_type_template_id_19322be3_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('sp-field-group',{attrs:{"vertical":_vm.vertical}},[(_vm.label)?_c('sp-field-label',{attrs:{"required":_vm.required,"necessity-indicator":_vm.necessityIndicator}},[_vm._v(" "+_vm._s(_vm.label)+" ")]):_vm._e(),_c('sp-field-group',{attrs:{"vertical":_vm.vertical}},[_c('vnode-syringe',{attrs:{"class&":"spectrum-FieldGroup-item","emphasized":_vm.emphasized}},[_vm._t("default")],2)],1)],1)}
+var SpRadioGroupvue_type_template_id_19322be3_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/SpRadioGroup.vue?vue&type=template&id=7dfc36e1&
+// CONCATENATED MODULE: ./src/components/SpRadioGroup.vue?vue&type=template&id=19322be3&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpRadioGroup.vue?vue&type=script&lang=js&
 
+//
+//
 //
 //
 //
@@ -12919,8 +12857,8 @@ var SpRadioGroupvue_type_template_id_7dfc36e1_staticRenderFns = []
 
 var SpRadioGroup_component = normalizeComponent(
   components_SpRadioGroupvue_type_script_lang_js_,
-  SpRadioGroupvue_type_template_id_7dfc36e1_render,
-  SpRadioGroupvue_type_template_id_7dfc36e1_staticRenderFns,
+  SpRadioGroupvue_type_template_id_19322be3_render,
+  SpRadioGroupvue_type_template_id_19322be3_staticRenderFns,
   false,
   null,
   null,

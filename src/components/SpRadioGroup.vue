@@ -1,5 +1,7 @@
 <template>
-	<sp-field-group>
+	<sp-field-group
+		:vertical="vertical"
+	>
 		<sp-field-label
 			v-if="label"
 			:required="required"
